@@ -1,2 +1,0 @@
-# NAVINT
-NAVAL Intelligence
