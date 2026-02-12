@@ -1,0 +1,54 @@
+# CONF23-STD-SDLC-NAVMIL
+- **WEB**: Webage with frontend and backend
+
+## 2. STACK & OPERATIONAL DIRECTIVES (STRICT)
+- **LANGUAGE**: Python 3.14.2. (Latest features prioritized; instability risks accepted).
+- **WEB FRAMEWORK**: Streamlit wih st.connection FastAPI and Next.js
+- **DATABASE**: SQLite
+- **DEPENDENCY MANAGEMENT**: `pip` + `requirements.txt` (Mandatory; `uv` is currently incompatible with 3.14.2).
+- **ASYNC**: Native `asyncio` mandatory for all I/O and Model Inference calls.
+- **LOGGING**: Structured JSON via `loguru`. Console debug output enabled: `logger.add(sys.stderr, level="DEBUG")`.
+- **DOCUMENTATION**: Google-style Docstrings + PEP 484/526 Type Hints.
+- **OPERATIVE SYSTEM**: Microsoft Windows [Version 10.0.26200.7840]
+- **PROCESSOR**:[01]: Intel64 Family 6 Model 140 Stepping 1 GenuineIntel ~2803 MHz
+- **MEMORY TOTAL**: 16.082 MB
+- **MEMORY AVAILABLE**: 9.144 MB
+- **LICENSING**: **Apache License 2.0** (Required for both Open Source and Commercial flexibility).
+
+## 3. SECURITY COMPLIANCE FRAMEWORK
+Projects must be hardened against the following standards:
+- **WEB**: OWASP Top 10 2025 (A01-A10).
+- **LLM**: OWASP Top 10 for LLM Applications 2025 (LLM01-LLM10).
+    - *Priority*: Mitigation of Prompt Injection (LLM01), Excessive Agency (LLM06), and Vector Weaknesses (LLM08).
+- **ENTERPRISE**: **ISO 27001** (Annex A Technical Controls).
+- **INDUSTRIAL**: **ISA/IEC 62443-4-2** (Technical Security Requirements for IACS).
+
+## 4. EXECUTION WORKFLOW
+1. **ANTIGRAVITY OPTIMIZATION**: Prompts optimized for Gemini Flash 3; structured for iterative side-by-side editing.
+2. **SOLID ARCHITECTURE**: Strict adherence to DRY and SOLID principles.
+3. **SECURITY BY DESIGN**: Early mitigation of Top 10 risks.
+4. **AUTOMATED BUILD**: Mandatory `build.cmd` for zero-touch install, config, and deployment.
+
+## 5. DOCUMENTATION & AGILITY
+### 5.1. Engineering Deliverables (ISO/IEC/IEEE 29148:2018 standard)
+	Automatic generation and update of the following markdown files:
+5.1.1. "DOC01_CONOS_Concept_of_Operations.md" Concept of Operations (CONOPS)
+- Purpose: This is an organization-level document that describes the leadership's intent and assumptions regarding how the business will operate.
+- Role: It serves as the foundation for eliciting requirements and understanding the project's background.
+5.1.2. "DOC02_BRS_Business_Requirements_Specification.md" Business Requirements Specification (BRS)
+- Purpose: Describes the organization's motivation for developing the system and defines the high-level processes and policies it must follow.
+- Role: It represents requirements at the business management level.
+5.1.3. "DOC03_StRS_Stakeholder_Requirements_Specification.md" Stakeholder Requirements Specification (StRS)
+- Purpose: Formally documents the needs of users, operators, and other stakeholders.
+- Role: It bridges the gap between the BRS and the technical system requirements, often incorporating a System Operational Concept (OpsCon) to describe the system from the user's viewpoint.
+5.1.4. "DOC04_SyRS_System_Requirements_Specification.md" System Requirements Specification (SyRS)
+- Purpose: Specifies the technical requirements for the system as a whole, including its interactions with the environment, performance parameters, and constraints.
+- Role: Acts as the definitive technical "bridge" between the acquirer’s needs and the builders' technical tasks.
+5.1.5. "DOC05_SRS_Software_Requirements_Specification.md" Software Requirements Specification (SRS)
+- Purpose: If the system includes software elements, the SRS defines the specific functions, interfaces, and quality attributes (like security and portability) for those software components.
+- Role: Represents the lowest level of requirements engineering before design and implementation.
+
+### 5.2. Scrum Artifacts
+The following artifacts must be maintained and delivered:
+- **Core**: Product Backlog, Sprint Backlog, and Increment (Source Code).
+- **Files**: `[Project]_ProductBacklog.md`, `[Project]_DefinitionOfDone.md`, and a collection of category-specific **ADRs**.
